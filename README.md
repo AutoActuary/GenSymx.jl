@@ -1,8 +1,6 @@
 # GenSymx.jl
 
-This module adds the function `gensymx` and macro `@gensymx`. They work exactly the same as Base's 
-`gensym` and `@gensym`, except that those symbols are generated in the form `Symbol("##varname#402")`
-and our symbols are generated in the form `:ₓₓvarnameₓ₄₀₂`  in order to remove some visual noise.
+This module adds the function `gensymx` and macro `@gensymx`. They work exactly the same as their Base equivalents, except that our symbols are generated in the form `:ₓₓvarₓ₄₀₂` to ease readability, rather than  `Symbol("##var#402")`.
 
 ### Example usage
 ```
