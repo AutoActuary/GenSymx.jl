@@ -1,4 +1,4 @@
-Module GenSymx
+module GenSymx
     export gensymx, @gensymx
 
 
