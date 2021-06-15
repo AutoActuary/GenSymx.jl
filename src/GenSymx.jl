@@ -1,4 +1,6 @@
 Module GenSymx
+    export gensymx, @gensymx
+
 
     numsubscript(s) = begin
         subs = Dict("0"=>"₀", "1"=>"₁", "2"=>"₂", "3"=>"₃", "4"=>"₄", "5"=>"₅", "6"=>"₆", "7"=>"₇", "8"=>"₈", "9"=>"₉");
@@ -15,14 +17,14 @@ Module GenSymx
         i = collect(findlast("#", sym))[1]
 
         nums = sym[i+1:end]
-        sym = "ₓₓ" * sym[3:i-1]*"ₓ"*numsubscript(nums)
+        sym = "ₓₓ" * sym[3:i-1] * "ₓ" * numsubscript(nums)
 
         Symbol(sym)
     end
 
     gensymx() = begin
         sym = string(gensym())
-        "ₓₓ"*numsubscript(sym[3:end])
+        Symbol("ₓₓ" * numsubscript(sym[3:end]))
     end
 
 
