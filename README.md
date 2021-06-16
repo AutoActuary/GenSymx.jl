@@ -5,7 +5,7 @@ This module adds the function `gensymx` and macro `@gensymx`. They work exactly 
 ### Example usage
 ```
 julia> using GenSymx
-julia> @gensym a b helloworld
+julia> @gensymx a b helloworld
 julia> @show a b helloworld
 a = :ₓₓaₓ₄₀₄
 b = :ₓₓbₓ₄₀₅
